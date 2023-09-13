@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* track pad section */
+::-webkit-scrollbar {
+    background: #FF681E;
+    border-radius: 50px;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E1F1C;
+    border-radius: 50px;
+}
+
+body {
+    background: #FFF;
+}
+
+/* Navbar Section */
+.navbar {
+    padding: 45px 11%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #FF8; */
+}
+
+.logo {
+    width: 137px;
+    height: 21px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.logo::before {
+    content: '';
+    width: 90px;
+    height: 2px;
+    bottom: -5px;
+    position: absolute;
+    background-color: #FF681E;
+}
+
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 30px;
+}
+
+.navbar ul li a {
+    color: #1E1F1C;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 2px;
+    bottom: 0;
+    background-color: #FF681E;
+    transition: 1s;
+}
+
+.navbar ul li a:hover::before{
+    width: 100%;
+}
+
+/* Text section */
+.main {
+    margin: 55px 0;
+}
+
+
+.main p {
+    text-align: center;
+    color: #000;
+    font-family: Helvetica;
+    font-size: 70px;
+    font-weight: 700;
+    position: relative;
+}
+
+.main p:first-child:after {
+    content: '';
+    width: 280px;
+    height: 76px;
+    left: 320px;
+    position: absolute;
+    border-radius: 50px;
+    border: 2px solid #FF681E;
+}
+
+.main p:last-child::after {
+    content: '';
+    width: 260px;
+    height: 76px;
+    right: 233px;
+    position: absolute;
+    border-radius: 50px;
+    border: 2px solid #FF681E;
+}
+
+
+/* Pictures Section */
+.pic {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.pic .first {
+    /* height: 234px; */
+    overflow: hidden;
+    background: url(blob-haikei.png);
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: 170%;
+    background-position-x: center;
+    padding: 12px 0 0;
+    background-position-y: 16px;
+}
+
+.pic .first:nth-child(1) {
+    background-position-y: 38px;
+    background-size: 386px;
+    padding: 0;
+}
+
+.pic .first:nth-child(3) {
+    background-position-y: 40px;
+    background-size: 386px;
+    background-position-x: -85px;
+}
+
+.pic .first:nth-child(1) img {
+    height: 256px;
+}
+
+.pic .first:nth-child(2) img {
+    width: 250px;
+}
+
+.pic .first:nth-child(3) img {
+    width: 250px;
+}
+
+
+/* Explore more button */
+.btn {
+    width: 175px;
+    margin: 4% auto;
+}
+
+button {
+    width: 155px;
+    height: 40px;
+    /* margin: 3% 40%; */
+    padding: 10px;
+    color: #fff;
+    background-color: #FF681E;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+button svg {
+    padding-top: 3px;
+    margin-left: 8px;
+}
+
+/* Review Section */
+.review {
+    margin-top: 155px;
+    background: #1E1F1C;
+    color: wheat;
+    padding: 150px 0 50px;
+    position: relative;
+}
+
+.review .circles {
+    width: 80%;
+    margin: auto;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -35%;
+    right: 10%;
+}
+
+.review .circles .circle {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    background: #1E1F1C;
+    margin: 0 35px 0;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review .circles .circle h2 {
+    color: #FF681E;
+    font-family: Franklin Gothic Demi Cond;
+    font-size: 40px;
+    margin: 2px 0;
+}
+
+.review .circles .circle h4,
+p {
+    color: #FFFFFF;
+    font-family: Poppins;
+    margin: 5px 0;
+}
+
+.review .circles .circle p {
+    font-size: 12px;
+}
+
+.review .main-box {
+    display: flex;
+    justify-content: space-between;
+    width: 79%;
+    margin: auto;
+}
+
+.review .main-box .middle {
+    width: 5px;
+    height: 120px;
+    margin: 0 35px;
+    background: #fff;
+}
+
+.review .main-box .left h2 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.review .main-box .right {
+    margin: 0 90px 0 10px;
+}
+
+.review .main-box .right pre {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.buttons {
+    /* margin: 4% auto; */
+    display: flex;
+    column-gap: 35px;
+}
+
+.buttons .learn {
+    background-color: transparent;
+    border: 2px solid;
+}
+
+
+/* Prduct Section */
+.same {
+    width: 80%;
+    margin: 7% auto 5%;
+}
+
+.same .text {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.same .text h1 {
+    color: #00000026;
+    font-size: 65px;
+    font-family: Poppins;
+    font-weight: 700;
+}
+
+.same .text h4 {
+    position: absolute;
+    bottom: 13px;
+    left: 28%;
+    font-size: 30px;
+    font-family: Poppins;
+}
+
+.products .images {
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products .images figure {
+    width: fit-content;
+}
+
+.products .images figure img {
+    width: 250px;
+}
+
+
+/* Category Section */
+.category .category-same {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.category .category-same div {
+    position: relative;
+}
+
+.category .category-same img {
+    width: 200px;
+    z-index: 0;
+}
+
+.category .category-same p {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Featured Section */
+/* First part */
+.feature-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.featured-same:first-child{
+    margin: 0 15px;
+    position: relative;
+}
+.featured .featured-same{
+    width: 510px;
+    height: 387px;
+}
+
+.featured .featured-same .street img{
+    width: 510px;
+    height: 387px;
+}
+
+.featured .featured-same .boys img{
+    width: 510px;
+    height: 186px;
+}
+
+.boys{
+    position: relative;
+}
+
+.formal{
+    margin-bottom: 15px;
+}
+
+.featured-same p{
+    bottom: 50px;
+    left: 35%;
+    letter-spacing: 4px;
+    position: absolute;
+    font-family: Helvetica;
+    background-color: #FF681E;
+    padding: 2px 5px;
+}
+
+/* Second part */
+.second-feature{
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-feature .left-container, .right-container{
+    width: 450px;
+    /* height: 387px; */
+    /* background: red; */
+    margin: 0 5px;
+}
+
+.second-feature .left-container pre{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.second-feature pre{
+    /* width: 500px; */
+    height: 120px;
+    overflow: hidden;
+}
+
+.second-feature img{
+    width: 450px;
+    height: 75%;
+}
+
+.second-feature .right-container pre{
+    padding-top: 20px;
+}
+
+/* Latest Section */
+.latest .parts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.latest .parts img{
+    width: 300px;
+}
+
+.latest pre{
+    width: 90%;
+    overflow: hidden;
+}
+
+/* Last Section */
+.last{
+    margin: 5% 0 0;
+    height: 290px;
+    background-color: #000;
+}
+
+.last .combo-last{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.last .left-last{
+    padding: 35px 0;
+    width: 30%;
+    color: white;
+    height: 250px;
+}
+
+.last pre{
+    margin-top: 25px;
+}
+
+.last h4{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Poppins;
+}
+
+.last p{
+    font-size: 15px;
+    font-family: Poppins;
+}
+
+.last .right-last{
+    width: 60%;
+    padding: 35px 0;
+    color: white;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.last .right-last h5{
+    font-family: Poppins;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
